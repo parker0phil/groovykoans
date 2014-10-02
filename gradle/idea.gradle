@@ -1,11 +1,11 @@
 apply plugin: 'idea'
 
-ideaWorkspace.outputFile = file("${rootProject.projectDir}/idea/${project.name}.iws")
+ideaWorkspace.outputFile = file("${rootProject.projectDir}/${project.name}.iws")
 
-ideaModule.outputFile = file("${rootProject.projectDir}/idea/${project.name}.iml")
+ideaModule.outputFile = file("${rootProject.projectDir}/${project.name}.iml")
 
 idea.project {
-    outputFile = file("${rootProject.projectDir}/idea/${rootProject.name}.ipr")
+    outputFile = file("${rootProject.projectDir}/${rootProject.name}.ipr")
 
     ipr.withXml { provider ->
         provider.node.component.find { it.@name == 'VcsDirectoryMappings' }.mapping[0].with {
